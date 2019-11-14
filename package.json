@@ -6,10 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
-    "lint": "eslint --fix src/",
-    "deploy": "git push -f heroku master",
-    "heroku-postbuild": "npm run build",
-    "heroku-start": "http-server dist/ -d false -g"
+    "lint": "eslint --fix src/"
   },
   "husky": {
     "hooks": {
