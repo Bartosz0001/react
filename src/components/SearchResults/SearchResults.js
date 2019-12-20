@@ -18,7 +18,7 @@ class SearchResults extends React.Component {
               <div className={styles.text}>
                 <h2 className={styles.title}>{card.title}</h2>
                 <div className={styles.description}>
-                  {card.columnTitle}, <span className={styles.strong}>{card.listTitle}</span>
+                  {card.columnTitle}, <span className={styles.strong} dangerouslySetInnerHTML={{__html: card.listTitle}}></span>
                 </div>
               </div>
             </div> 
