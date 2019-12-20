@@ -15,7 +15,7 @@ const App = () => (
         <Route exact path='/info' component={Info} />
         <Route exact path='/FAQ' component={FAQ} />
         <Route exact path="/list/:id" component={List} />
-        <Route exact path="/Search/..." component={Search} />
+        <Route exact path="/Search/:searchString" component={Search} />
       </Switch>
     </MainLayout>
   </BrowserRouter>

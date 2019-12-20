@@ -2,12 +2,10 @@ import {connect} from 'react-redux';
 import SearchResults from './SearchResults';
 import {searchCards} from '../../redux/CardsRedux.js';
 
-const mapStateToProps = (state) => {
-  const cards = state.cards;
-  const cardParams = cards[0] || {};
+const mapStateToProps = (state, props) => {
+  console.log('Props: ', props.match.params.searchString);
   return {
-    ...cardParams,
-    filteredCards: searchCards(state),
+    filteredCards: searchCards(state, props.match.params.searchString),
   };
 };
 
